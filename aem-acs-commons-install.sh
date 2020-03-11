@@ -6,6 +6,7 @@ PROJECT_NAME="acs-aem-commons"
 
 # pass custom port as 1st command line argument or use 4502 by default
 PORT=${1:-4502}
+HOST=${1:-localhost}
 
 echo PROJECT DIR="${PROJECT_DIR_PARENT}/${PROJECT_NAME}"
 echo PORT=${PORT}
@@ -20,5 +21,5 @@ else
 	git pull
 fi
 
-mvn clean -PautoInstallPackage -DskipTests -Dmaven.test.skip=true install -Dcrx.port=${PORT}
+mvn clean -PautoInstallPackage -DskipTests -Dmaven.test.skip=true install -Dcrx.port=${PORT} -Dcrx.host=${HOST}
 open http://localhost:${PORT}/miscadmin#/etc/acs-commons
