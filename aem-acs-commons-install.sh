@@ -22,4 +22,4 @@ else
 fi
 
 mvn clean -PautoInstallPackage -DskipTests -Dmaven.test.skip=true install -Dcrx.port=${PORT} -Dcrx.host=${HOST}
-open http://localhost:${PORT}/miscadmin#/etc/acs-commons
+open http://${HOST}:${PORT}/miscadmin#/etc/acs-commons
