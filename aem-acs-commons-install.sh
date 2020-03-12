@@ -6,6 +6,8 @@ PROJECT_NAME="acs-aem-commons"
 
 # pass custom port as 1st command line argument or use 4502 by default
 PORT=${1:-4502}
+
+# pass custom host as 2nd arg if other than localhost (WITHOUT http://)
 HOST=${1:-localhost}
 
 echo PROJECT DIR="${PROJECT_DIR_PARENT}/${PROJECT_NAME}"
