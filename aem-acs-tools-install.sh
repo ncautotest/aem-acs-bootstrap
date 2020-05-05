@@ -7,6 +7,9 @@ PROJECT_NAME="acs-aem-tools"
 # pass custom port as 1st command line argument or use 4502 by default
 PORT=${1:-4502}
 
+# pass custom host as 2nd arg if other than localhost (WITHOUT http://)
+HOST=${1:-localhost}
+
 echo PROJECT DIR="${PROJECT_DIR_PARENT}/${PROJECT_NAME}"
 echo PORT=${PORT}
 
@@ -20,5 +23,5 @@ else
 	git pull
 fi
 
-mvn clean -PautoInstallPackage  -Dmaven.test.skip=true install -Dcrx.port=${PORT}
-open http://localhost:${PORT}/miscadmin#/etc/acs-tools
+mvn clean -PautoInstallPackage  -Dmaven.test.skip=true install -Dcrx.port=${PORT}  -Dcrx.host=${HOST}
+open http://${HOST}:${PORT}/miscadmin#/etc/acs-tools
