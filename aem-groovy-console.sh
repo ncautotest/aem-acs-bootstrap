@@ -21,5 +21,5 @@ else
 	git pull
 fi
 
-mvn clean install -P local -Daem.port.author=${PORT} -Daem.host.author=${HOST}  -DskipTests -Dmaven.skip.test=1
+mvn clean install -P local -Daem.port.author=${PORT} -Daem.host.author=${HOST}  -DskipTests -Dmaven.test.skip=true
 open http://${HOST}:${PORT}/etc/groovyconsole.html
