@@ -2,7 +2,7 @@
 
 PROJECT_DIR_PARENT="${HOME}/projects/aem6"
 mkdir -p ${PROJECT_DIR_PARENT}
-PROJECT_NAME="cq-groovy-console"
+PROJECT_NAME="aem-groovy-console"
 # optional 1st command line arg to override port default=4502
 PORT=${1:-4502}
 
@@ -14,7 +14,7 @@ echo PORT=${PORT}
 
 if [ ! -d "${PROJECT_DIR_PARENT}/${PROJECT_NAME}" ]; then
 	cd "${PROJECT_DIR_PARENT}"
-	git clone --depth 1 "https://github.com/Citytechinc/${PROJECT_NAME}.git"
+	git clone --depth 1 "https://github.com/CID15/${PROJECT_NAME}.git"
 	cd "${PROJECT_NAME}"
 else
 	cd "${PROJECT_DIR_PARENT}/${PROJECT_NAME}"
