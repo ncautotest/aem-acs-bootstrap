@@ -7,7 +7,7 @@ PROJECT_NAME="aem-groovy-console"
 PORT=${1:-4502}
 
 # optional 2nd arg to override host default=localhost (WITHOUT http://)
-HOST=${1:-localhost}
+HOST=${2:-localhost}
 
 echo PROJECT DIR="${PROJECT_DIR_PARENT}/${PROJECT_NAME}"
 echo PORT=${PORT}
