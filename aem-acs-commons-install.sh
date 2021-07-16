@@ -8,7 +8,7 @@ PROJECT_NAME="acs-aem-commons"
 PORT=${1:-4502}
 
 # pass custom host as 2nd arg if other than localhost (WITHOUT http://)
-HOST=${1:-localhost}
+HOST=${2:-localhost}
 
 echo PROJECT DIR="${PROJECT_DIR_PARENT}/${PROJECT_NAME}"
 echo PORT=${PORT}
